@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323B91F74F1240004F300 /* AppDelegate.swift */; };
+		EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323BB1F74F1240004F300 /* ViewController.swift */; };
+		EE1323BF1F74F1240004F300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323BD1F74F1240004F300 /* Main.storyboard */; };
+		EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C01F74F1240004F300 /* Assets.xcassets */; };
+		EE1323C41F74F1240004F300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */; };
+		EE1323CF1F74F1240004F300 /* YuhanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323CE1F74F1240004F300 /* YuhanTests.swift */; };
+		EE1323DA1F74F1240004F300 /* YuhanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323D91F74F1240004F300 /* YuhanUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE1323CB1F74F1240004F300 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1323AE1F74F1240004F300 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1323B51F74F1240004F300;
+			remoteInfo = Yuhan;
+		};
+		EE1323D61F74F1240004F300 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE1323AE1F74F1240004F300 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE1323B51F74F1240004F300;
+			remoteInfo = Yuhan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE1323B61F74F1240004F300 /* Yuhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yuhan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1323B91F74F1240004F300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE1323BB1F74F1240004F300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE1323BE1F74F1240004F300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE1323C01F74F1240004F300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE1323C31F74F1240004F300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE1323C51F74F1240004F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1323CA1F74F1240004F300 /* YuhanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuhanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1323CE1F74F1240004F300 /* YuhanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuhanTests.swift; sourceTree = "<group>"; };
+		EE1323D01F74F1240004F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE1323D51F74F1240004F300 /* YuhanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuhanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE1323D91F74F1240004F300 /* YuhanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuhanUITests.swift; sourceTree = "<group>"; };
+		EE1323DB1F74F1240004F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE1323B31F74F1240004F300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323C71F74F1240004F300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323D21F74F1240004F300 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE1323AD1F74F1240004F300 = {
+			isa = PBXGroup;
+			children = (
+				EE1323B81F74F1240004F300 /* Yuhan */,
+				EE1323CD1F74F1240004F300 /* YuhanTests */,
+				EE1323D81F74F1240004F300 /* YuhanUITests */,
+				EE1323B71F74F1240004F300 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE1323B71F74F1240004F300 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE1323B61F74F1240004F300 /* Yuhan.app */,
+				EE1323CA1F74F1240004F300 /* YuhanTests.xctest */,
+				EE1323D51F74F1240004F300 /* YuhanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE1323B81F74F1240004F300 /* Yuhan */ = {
+			isa = PBXGroup;
+			children = (
+				EE1323B91F74F1240004F300 /* AppDelegate.swift */,
+				EE1323BB1F74F1240004F300 /* ViewController.swift */,
+				EE1323BD1F74F1240004F300 /* Main.storyboard */,
+				EE1323C01F74F1240004F300 /* Assets.xcassets */,
+				EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */,
+				EE1323C51F74F1240004F300 /* Info.plist */,
+			);
+			path = Yuhan;
+			sourceTree = "<group>";
+		};
+		EE1323CD1F74F1240004F300 /* YuhanTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1323CE1F74F1240004F300 /* YuhanTests.swift */,
+				EE1323D01F74F1240004F300 /* Info.plist */,
+			);
+			path = YuhanTests;
+			sourceTree = "<group>";
+		};
+		EE1323D81F74F1240004F300 /* YuhanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1323D91F74F1240004F300 /* YuhanUITests.swift */,
+				EE1323DB1F74F1240004F300 /* Info.plist */,
+			);
+			path = YuhanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE1323B51F74F1240004F300 /* Yuhan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1323DE1F74F1240004F300 /* Build configuration list for PBXNativeTarget "Yuhan" */;
+			buildPhases = (
+				EE1323B21F74F1240004F300 /* Sources */,
+				EE1323B31F74F1240004F300 /* Frameworks */,
+				EE1323B41F74F1240004F300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yuhan;
+			productName = Yuhan;
+			productReference = EE1323B61F74F1240004F300 /* Yuhan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE1323C91F74F1240004F300 /* YuhanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1323E11F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanTests" */;
+			buildPhases = (
+				EE1323C61F74F1240004F300 /* Sources */,
+				EE1323C71F74F1240004F300 /* Frameworks */,
+				EE1323C81F74F1240004F300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1323CC1F74F1240004F300 /* PBXTargetDependency */,
+			);
+			name = YuhanTests;
+			productName = YuhanTests;
+			productReference = EE1323CA1F74F1240004F300 /* YuhanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE1323D41F74F1240004F300 /* YuhanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE1323E41F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanUITests" */;
+			buildPhases = (
+				EE1323D11F74F1240004F300 /* Sources */,
+				EE1323D21F74F1240004F300 /* Frameworks */,
+				EE1323D31F74F1240004F300 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE1323D71F74F1240004F300 /* PBXTargetDependency */,
+			);
+			name = YuhanUITests;
+			productName = YuhanUITests;
+			productReference = EE1323D51F74F1240004F300 /* YuhanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE1323AE1F74F1240004F300 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Maho Misumi";
+				TargetAttributes = {
+					EE1323B51F74F1240004F300 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					EE1323C91F74F1240004F300 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE1323B51F74F1240004F300;
+					};
+					EE1323D41F74F1240004F300 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE1323B51F74F1240004F300;
+					};
+				};
+			};
+			buildConfigurationList = EE1323B11F74F1240004F300 /* Build configuration list for PBXProject "Yuhan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE1323AD1F74F1240004F300;
+			productRefGroup = EE1323B71F74F1240004F300 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE1323B51F74F1240004F300 /* Yuhan */,
+				EE1323C91F74F1240004F300 /* YuhanTests */,
+				EE1323D41F74F1240004F300 /* YuhanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE1323B41F74F1240004F300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1323C41F74F1240004F300 /* LaunchScreen.storyboard in Resources */,
+				EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */,
+				EE1323BF1F74F1240004F300 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323C81F74F1240004F300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323D31F74F1240004F300 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE1323B21F74F1240004F300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */,
+				EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323C61F74F1240004F300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1323CF1F74F1240004F300 /* YuhanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE1323D11F74F1240004F300 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE1323DA1F74F1240004F300 /* YuhanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE1323CC1F74F1240004F300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1323B51F74F1240004F300 /* Yuhan */;
+			targetProxy = EE1323CB1F74F1240004F300 /* PBXContainerItemProxy */;
+		};
+		EE1323D71F74F1240004F300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE1323B51F74F1240004F300 /* Yuhan */;
+			targetProxy = EE1323D61F74F1240004F300 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE1323BD1F74F1240004F300 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE1323BE1F74F1240004F300 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE1323C31F74F1240004F300 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE1323DC1F74F1240004F300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE1323DD1F74F1240004F300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE1323DF1F74F1240004F300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yuhan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.Yuhan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EE1323E01F74F1240004F300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Yuhan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.Yuhan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EE1323E21F74F1240004F300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YuhanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.YuhanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yuhan.app/Yuhan";
+			};
+			name = Debug;
+		};
+		EE1323E31F74F1240004F300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YuhanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.YuhanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yuhan.app/Yuhan";
+			};
+			name = Release;
+		};
+		EE1323E51F74F1240004F300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YuhanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.YuhanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Yuhan;
+			};
+			name = Debug;
+		};
+		EE1323E61F74F1240004F300 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = YuhanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = maho.com.YuhanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Yuhan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE1323B11F74F1240004F300 /* Build configuration list for PBXProject "Yuhan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1323DC1F74F1240004F300 /* Debug */,
+				EE1323DD1F74F1240004F300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE1323DE1F74F1240004F300 /* Build configuration list for PBXNativeTarget "Yuhan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1323DF1F74F1240004F300 /* Debug */,
+				EE1323E01F74F1240004F300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE1323E11F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1323E21F74F1240004F300 /* Debug */,
+				EE1323E31F74F1240004F300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EE1323E41F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE1323E51F74F1240004F300 /* Debug */,
+				EE1323E61F74F1240004F300 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE1323AE1F74F1240004F300 /* Project object */;
+}
