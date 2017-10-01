@@ -14,6 +14,8 @@
 		EE1323C41F74F1240004F300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */; };
 		EE1323CF1F74F1240004F300 /* YuhanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323CE1F74F1240004F300 /* YuhanTests.swift */; };
 		EE1323DA1F74F1240004F300 /* YuhanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323D91F74F1240004F300 /* YuhanUITests.swift */; };
+		EEC421711F791238002AE24B /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC421701F791238002AE24B /* DateManager.swift */; };
+		EEC421731F791283002AE24B /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC421721F791283002AE24B /* CalenderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		EE1323D51F74F1240004F300 /* YuhanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuhanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1323D91F74F1240004F300 /* YuhanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuhanUITests.swift; sourceTree = "<group>"; };
 		EE1323DB1F74F1240004F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC421701F791238002AE24B /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
+		EEC421721F791283002AE24B /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				EE1323C01F74F1240004F300 /* Assets.xcassets */,
 				EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */,
 				EE1323C51F74F1240004F300 /* Info.plist */,
+				EEC421701F791238002AE24B /* DateManager.swift */,
+				EEC421721F791283002AE24B /* CalenderCell.swift */,
 			);
 			path = Yuhan;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */,
+				EEC421731F791283002AE24B /* CalenderCell.swift in Sources */,
+				EEC421711F791238002AE24B /* DateManager.swift in Sources */,
 				EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +513,7 @@
 				EE1323E01F74F1240004F300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE1323E11F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +522,7 @@
 				EE1323E31F74F1240004F300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE1323E41F74F1240004F300 /* Build configuration list for PBXNativeTarget "YuhanUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +531,7 @@
 				EE1323E61F74F1240004F300 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
