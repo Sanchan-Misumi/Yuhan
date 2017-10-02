@@ -102,13 +102,13 @@ func changeHeaderTitle(date: Date) -> String{
 }
 
     //①タップ時
-func tappeHeaderPrevBth(sender: UIButton) {
+@IBAction func tappeHeaderPrevBth(sender: UIButton) {
     selectedDate = dateManager.prevMonth(date: selectedDate)
     calenderCollectionView.reloadData()
     headerTitle.text = changeHeaderTitle(date: selectedDate)
 }
     //②タップ時
-func tappeHeaderNextBth(sender: UIButton) {
+@IBAction func tappeHeaderNextBth(sender: UIButton) {
     selectedDate = dateManager.prevMonth(date: selectedDate)
     calenderCollectionView.reloadData()
     headerTitle.text = changeHeaderTitle(date: selectedDate)
