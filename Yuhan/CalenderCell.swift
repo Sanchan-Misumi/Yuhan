@@ -14,20 +14,16 @@ class CalenderCell: UICollectionViewCell {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-    }
-    
-    
-    override init (frame: CGRect){
-        super.init(frame: frame)
+        
         //UIラベルを作成
-        textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
         textLabel.font = UIFont(name: "HiraKakuProN-W3", size: 12)
         textLabel.textAlignment = NSTextAlignment.center
         //Cellに追加
         self.addSubview(textLabel!)
     }
     
-//    override init(frame: CGRect){
-//        super.init(frame: frame)
-//    }
+    override init(frame: CGRect){
+        super.init(frame: frame)
+    }
 }
