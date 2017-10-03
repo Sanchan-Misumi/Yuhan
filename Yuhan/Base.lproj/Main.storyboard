@@ -21,20 +21,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-fM-OOu">
-                                <rect key="frame" x="32" y="20" width="45" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e35-le-obG">
+                                <rect key="frame" x="175" y="26" width="103" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pre"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-fM-OOu">
+                                <rect key="frame" x="277" y="20" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next"/>
                                 <connections>
-                                    <action selector="tappeHeaderPrevBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="X04-AB-LTu"/>
+                                    <action selector="tappeHeaderNextBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="aHP-br-yv1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKV-kW-HOa">
-                                <rect key="frame" x="306" y="21" width="53" height="30"/>
+                                <rect key="frame" x="30" y="20" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <state key="normal" title="pre"/>
                                 <connections>
-                                    <action selector="tappeHeaderNextBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="xC8-4X-vWp"/>
+                                    <action selector="tappeHeaderPrevBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="bsL-6s-Ib3"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-6y-Lr5">
@@ -47,6 +54,13 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WWQ-2F-jTK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rQB-z6-Xhj" customClass="CalenderCell" customModule="Yuhan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -54,26 +68,46 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owg-hK-Wyk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="owg-hK-Wyk" firstAttribute="leading" secondItem="rQB-z6-Xhj" secondAttribute="leading" id="LTA-cj-9hm"/>
+                                            <constraint firstItem="owg-hK-Wyk" firstAttribute="top" secondItem="rQB-z6-Xhj" secondAttribute="top" id="iZe-4n-tHo"/>
+                                            <constraint firstAttribute="bottom" secondItem="owg-hK-Wyk" secondAttribute="bottom" id="neb-lG-bFU"/>
+                                            <constraint firstAttribute="trailing" secondItem="owg-hK-Wyk" secondAttribute="trailing" id="pbR-tg-yI6"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="ColorView" destination="owg-hK-Wyk" id="w95-9r-9SR"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e35-le-obG">
-                                <rect key="frame" x="180" y="26" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Gj-xd-n10">
+                                <rect key="frame" x="0.0" y="384" width="375" height="246"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="528726358.36776602">
+                                    <!--2017-10-03 12:25:58 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja"/>
+                                <connections>
+                                    <action selector="changetime:" destination="0y9-dY-AkI" eventType="valueChanged" id="klz-Tz-FUM"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calenderCollectionView" destination="9g3-6y-Lr5" id="I30-jV-Gyc"/>
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
-                        <outlet property="headerNextBtn" destination="IKV-kW-HOa" id="dPt-Q5-3TQ"/>
-                        <outlet property="headerPrevBtn" destination="RhX-fM-OOu" id="8RH-VD-L1m"/>
+                        <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
+                        <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
+                        <outlet property="testLabel" destination="WWQ-2F-jTK" id="gLt-DK-TQ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3S-Lt-A5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

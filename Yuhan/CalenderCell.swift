@@ -12,6 +12,12 @@ class CalenderCell: UICollectionViewCell {
     
     var textLabel: UILabel!
     
+    var tapNumber: Int = 0
+    
+ 
+    @IBOutlet var ColorView: UIView!
+    
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
