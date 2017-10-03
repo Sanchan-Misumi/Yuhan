@@ -42,12 +42,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         calenderCollectionView.dataSource = self
         calenderCollectionView.backgroundColor = UIColor.white
     }
-
+    
     //1
-    func numberOfSecctions(in collectionView: UICollectionView) -> Int {
-        
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
-        
+     
     }
     //2
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -88,15 +88,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return CGSize(width: width, height: height)
     }
     //セルの垂直方向のアージンを設定
-    func collectionView(_ collectionView: UICollectionView, layout collctionViewLayout: UICollectionViewLayout, miniumLineSpacingForSectionAt section: Int) ->  CGFloat{
+
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        
         return cellMargin
     }
 
 //headerの月を変更
 func changeHeaderTitle(date: Date) -> String{
     let formatter: DateFormatter = DateFormatter()
-    formatter.dateFormat = "My/yyyy"
+    formatter.dateFormat = "MM"
     let selectMonth = formatter.string(from: date)
     return selectMonth
 }

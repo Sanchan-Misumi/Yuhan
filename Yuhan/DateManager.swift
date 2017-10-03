@@ -34,9 +34,10 @@ class DateManager: NSObject{
     
     //月ごとのセルの数を返すメソッド
     func daysAcquisitition() -> Int {
-       let rangeOfWeeks = Calendar.current.range(of: .weekOfMonth, in: .month, for: firstDateOfMonth())
+        let rangeOfWeeks = Calendar.current.range(of: .weekOfMonth, in: .month, for: firstDateOfMonth())
 //     let rangeOfWeeks = Calender.current.range(of: .weekOfMonth, in: .month, for:  firstDateOfMonth())
-        numberOfItems = numberOfItems * daysPerWeek
+        let numberOfWeeks = rangeOfWeeks!.count
+        numberOfItems = numberOfWeeks * daysPerWeek
 //        let numberOfWeeks = rangeOfWeeks ＊ daysPerWeek //週の数×列
         return numberOfItems
     }
