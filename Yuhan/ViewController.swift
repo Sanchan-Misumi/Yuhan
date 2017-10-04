@@ -74,18 +74,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         dateSelecter.inputView = inputDatePicker
         
         //キーボードに表示するツールバーの表示
-        let pickerToolBar = UIToolbar(Frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0)) //バージョンが古い
+        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
         pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-        pickerToolBar.barstyle = .BrackTranslucent
-        pickerToolBar.tintColor = UIColor.white()
-        pickerToolBar.backgroundColor = UIColor.black()
+        pickerToolBar.barStyle = .blackTranslucent
+        pickerToolBar.tintColor = UIColor.white
+        pickerToolBar.backgroundColor = UIColor.black
         
         //ボタンの設定
         //右寄せのためのスペース設定
         let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self,action: Selector(""))
         
         //完了ボタンを設定
-        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector("toolBarBtnPush:"))
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector(("toolBarBtnPush:")))
         
         //ツールバーにボタンを表示
         pickerToolBar.items = [spaceBarBtn,toolBarBtn]
