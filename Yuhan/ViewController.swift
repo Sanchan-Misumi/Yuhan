@@ -32,7 +32,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     let dateFormat = DateFormatter()
     let inputDatePicker = UIDatePicker()
 
-    @IBOutlet weak var dateSelecter: UITextField!
+    @IBOutlet weak var dateSelecter: UITableViewCell!
     
     
     let dateManager = DateManager()
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
         pickerToolBar.barStyle = .blackTranslucent
         pickerToolBar.tintColor = UIColor.white
-        pickerToolBar.backgroundColor = UIColor.black
+        pickerToolBar.backgroundColor = UIColor.LightRed()
         
         //ボタンの設定
         //右寄せのためのスペース設定
