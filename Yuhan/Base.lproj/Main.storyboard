@@ -54,7 +54,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WWQ-2F-jTK">
+                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lv4-F7-ktO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -98,16 +98,31 @@
                                     <action selector="changetime:" destination="0y9-dY-AkI" eventType="valueChanged" id="klz-Tz-FUM"/>
                                 </connections>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B3c-VD-1ai">
+                                <rect key="frame" x="91" y="331" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsw-Xg-PPJ">
+                                <rect key="frame" x="146" y="336" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calenderCollectionView" destination="9g3-6y-Lr5" id="I30-jV-Gyc"/>
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
+                        <outlet property="dateSelecter" destination="B3c-VD-1ai" id="zKb-Ha-v9B"/>
                         <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
                         <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
-                        <outlet property="testLabel" destination="WWQ-2F-jTK" id="gLt-DK-TQ6"/>
+                        <outlet property="testLabel" destination="Jsw-Xg-PPJ" id="WJw-ps-xL9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3S-Lt-A5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>

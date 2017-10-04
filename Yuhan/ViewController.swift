@@ -11,6 +11,8 @@
 //}
 import UIKit
 
+
+
 extension UIColor{
     class func LightBlue() -> UIColor {
         return UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
@@ -20,7 +22,18 @@ extension UIColor{
     }
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate  {
+    
+    //Datepickerの動きを入れる
+    
+    //変数を宣言する
+    //今日の日付を代入
+    let nowDate = Date()
+    let dateFormat = DateFormatter()
+    let inputDatePicker = UIDatePicker()
+
+    @IBOutlet weak var dateSelecter: UITextField!
+    
     
     let dateManager = DateManager()
     let daysPerWeek: Int = 7
@@ -50,9 +63,49 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         calenderCollectionView.dataSource = self
         calenderCollectionView.backgroundColor = UIColor.white
         headerTitle.text = changeHeaderTitle(date: selectedDate)
+        
+        //日付フィールドの設定
+        dateFormat.dateFormat = "HH:mm"
+        dateSelecter.text = dateFormat.string(from: nowDate)
+        self.dateSelecter.delegate = self
+        
+        //DatePickerの設定（日付用）
+        inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
+        dateSelecter.inputView = inputDatePicker
+        
+        //キーボードに表示するツールバーの表示
+        let pickerToolBar = UIToolbar(Frame: CGRectMake(0, self.view.frame.size.height/6, self.view.frame.size.width, 40.0)) //バージョンが古い
+        pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
+        pickerToolBar.barstyle = .BrackTranslucent
+        pickerToolBar.tintColor = UIColor.white()
+        pickerToolBar.backgroundColor = UIColor.black()
+        
+        //ボタンの設定
+        //右寄せのためのスペース設定
+        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self,action: Selector(""))
+        
+        //完了ボタンを設定
+        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector("toolBarBtnPush:"))
+        
+        //ツールバーにボタンを表示
+        pickerToolBar.items = [spaceBarBtn,toolBarBtn]
+        dateSelecter.inputAccessoryView = pickerToolBar
     }
-   
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
     
+    //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
+    func toolBarBtnPush(sender: UIBarButtonItem){
+        
+        
+        var pickrDate = inputDatePicker.date
+        dateSelecter.text = dateFormat.string(from: pickrDate)
+        
+        self.view.endEditing(true)
+        
+    }
     //1
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
