@@ -101,13 +101,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-qa-iBN">
+                                <rect key="frame" x="0.0" y="439" width="375" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="528859278.852889">
+                                    <!--2017-10-05 01:21:18 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calenderCollectionView" destination="9g3-6y-Lr5" id="I30-jV-Gyc"/>
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
-                        <outlet property="dateSelecter" destination="B3c-VD-1ai" id="zKb-Ha-v9B"/>
+                        <outlet property="dateSelecter" destination="B3c-VD-1ai" id="9Tr-fV-ZLy"/>
                         <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
                         <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
