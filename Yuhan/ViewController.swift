@@ -17,6 +17,7 @@ extension UIColor{
         return UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
     }
 }
+//{}の数あってる
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -45,9 +46,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
      @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var dateBtn: UIButton!
-    @IBAction func tapedDateBtn(sender: UIButton) {
-        datePicker.isHidden = false
-    }
+//    @IBAction func tapedDateBtn(sender: UIButton) {
+//        datePicker.isHidden = false
+//    }
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
     
@@ -120,7 +121,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //
 //        self.view.endEditing(true)
 //
-    }
+//    }
     //1
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -176,36 +177,37 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
+         let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
         
         cell.tapNumber = cell.tapNumber + 1
+    
         
-        if cell.tapNumber % 3 == 0 {
+         if cell.tapNumber % 3 == 0 {
             cell.ColorView.backgroundColor = UIColor.white
         }  else if cell.tapNumber % 3 == 1 {
             cell.ColorView.backgroundColor = UIColor(red: 1.0, green: 0.0, blue: 1.0, alpha: 0.2)
         } else {
             cell.ColorView.backgroundColor = UIColor(red: 0.0, green: 0.502, blue: 1.0, alpha: 0.2)
         }
-        
+        }
     //headerの月を変更
     func changeHeaderTitle(date: Date) -> String{
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "MM"
         let selectMonth = formatter.string(from: date)
         return selectMonth
-}
+        }
     //①タップ時
     func tappeHeaderPrevBth(sender: UIButton) {
      selectedDate = dateManager.prevMonth(date: selectedDate)
      calenderCollectionView.reloadData()
      headerTitle.text = changeHeaderTitle(date: selectedDate)
-    }
+        }
     //②タップ時
     func tappeHeaderNextBth(sender: UIButton) {
      selectedDate = dateManager.nextMonth(date: selectedDate)
      calenderCollectionView.reloadData()
      headerTitle.text = changeHeaderTitle(date: selectedDate)
+        }
     }
-}
 
