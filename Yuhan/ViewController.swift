@@ -6,12 +6,8 @@
 //  Copyright © 2017年 Maho Misumi. All rights reserved.
 //
 
-//func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//    <#code#>
-//}
+
 import UIKit
-
-
 
 extension UIColor{
     class func LightBlue() -> UIColor {
@@ -22,7 +18,7 @@ extension UIColor{
     }
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout  {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //Datepickerの動きを入れる
     
@@ -60,6 +56,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         datePicker.isHidden = false
     }
     
+    
     @IBAction func tapedCloseBtn(sender: UIButton) {
         closeBtn.isHidden = true
         datePicker.isHidden = true
@@ -72,6 +69,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         testLabel.text = formatter.string(from: sender.date) //swift3バージョンに挙げられているか不明
     }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -86,8 +85,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        self.dateSelecter.delegate = self
 //
         //DatePickerの設定（日付用）
-        inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
-        dateSelecter.inputView = inputDatePicker
+         inputDatePicker.datePickerMode = UIdatePickerMode.Date //dateをfixで直した。元はDate
+         dateSelecter.inputView = inputDatePicker
         
 //        //キーボードに表示するツールバーの表示
 //        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
@@ -189,28 +188,24 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cell.ColorView.backgroundColor = UIColor(red: 0.0, green: 0.502, blue: 1.0, alpha: 0.2)
         }
         
-    }
     //headerの月を変更
     func changeHeaderTitle(date: Date) -> String{
         let formatter: DateFormatter = DateFormatter()
         formatter.dateFormat = "MM"
         let selectMonth = formatter.string(from: date)
         return selectMonth
-    }
-    
+}
     //①タップ時
-    @IBAction func tappeHeaderPrevBth(sender: UIButton) {
-        selectedDate = dateManager.prevMonth(date: selectedDate)
-        calenderCollectionView.reloadData()
-        headerTitle.text = changeHeaderTitle(date: selectedDate)
+    func tappeHeaderPrevBth(sender: UIButton) {
+     selectedDate = dateManager.prevMonth(date: selectedDate)
+     calenderCollectionView.reloadData()
+     headerTitle.text = changeHeaderTitle(date: selectedDate)
     }
     //②タップ時
-    @IBAction func tappeHeaderNextBth(sender: UIButton) {
-        selectedDate = dateManager.nextMonth(date: selectedDate)
-        calenderCollectionView.reloadData()
-        headerTitle.text = changeHeaderTitle(date: selectedDate)
+    func tappeHeaderNextBth(sender: UIButton) {
+     selectedDate = dateManager.nextMonth(date: selectedDate)
+     calenderCollectionView.reloadData()
+     headerTitle.text = changeHeaderTitle(date: selectedDate)
     }
 }
-
-
 
