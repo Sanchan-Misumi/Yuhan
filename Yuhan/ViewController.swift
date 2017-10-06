@@ -7,8 +7,11 @@
 //
 
 
+
+
 import UIKit
 
+//カレンダー
 extension UIColor{
     class func LightBlue() -> UIColor {
         return UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
@@ -17,21 +20,17 @@ extension UIColor{
         return UIColor(red: 195.0 / 255, green: 123.0 / 255, blue: 175.0 / 255, alpha: 1.0)
     }
 }
-//{}の数あってる
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    //Datepickerの動きを入れる
+    //変数を宣言する
+    //今日の日付を代入
+    let nowDate = Date()
+    let dateFormat = DateFormatter()
+    let inputDatePicker = UIDatePicker()
+    @IBOutlet weak var dateSelecter: UITextField!
     
-//    //変数を宣言する
-//    //今日の日付を代入
-//    let nowDate = Date()
-//    let dateFormat = DateFormatter()
-//    let inputDatePicker = UIDatePicker()
-//
-//    @IBOutlet weak var dateSelecter: UITextField!
-//
-    
+    //カレンダー
     let dateManager = DateManager()
     let daysPerWeek: Int = 7
     let cellMargin: CGFloat = 2.0
@@ -44,6 +43,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var headerTitle: UILabel! //③
     @IBOutlet weak var calenderHeaderView: UIView! //①
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
+    
+    //
      @IBOutlet weak var testLabel: UILabel!
     @IBOutlet weak var dateBtn: UIButton!
 //    @IBAction func tapedDateBtn(sender: UIButton) {
@@ -198,13 +199,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return selectMonth
         }
     //①タップ時
-    func tappeHeaderPrevBth(sender: UIButton) {
+    @IBAction func tappeHeaderPrevBth(sender: UIButton) {
      selectedDate = dateManager.prevMonth(date: selectedDate)
      calenderCollectionView.reloadData()
      headerTitle.text = changeHeaderTitle(date: selectedDate)
+        
         }
     //②タップ時
-    func tappeHeaderNextBth(sender: UIButton) {
+  @IBAction func tappeHeaderNextBth(sender: UIButton) {
      selectedDate = dateManager.nextMonth(date: selectedDate)
      calenderCollectionView.reloadData()
      headerTitle.text = changeHeaderTitle(date: selectedDate)
