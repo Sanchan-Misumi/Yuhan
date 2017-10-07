@@ -23,13 +23,13 @@ extension UIColor{
 
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    //変数を宣言する
-    //今日の日付を代入
-    let nowDate = Date()
-    let dateFormat = DateFormatter()
-    let inputDatePicker = UIDatePicker()
-    @IBOutlet weak var dateSelecter: UITextField!
-    
+//    //変数を宣言する
+//    //今日の日付を代入
+//    let nowDate = Date()
+//    let dateFormat = DateFormatter()
+//    let inputDatePicker = UIDatePicker()
+//    @IBOutlet weak var dateSelecter: UITextField!
+//
     //カレンダー
     let dateManager = DateManager()
     let daysPerWeek: Int = 7
@@ -46,14 +46,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     //
      @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var dateBtn: UIButton!
+//    @IBOutlet weak var dateBtn: UIButton!
 //    @IBAction func tapedDateBtn(sender: UIButton) {
 //        datePicker.isHidden = false
 //    }
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
     
-    @IBAction func tapedDateBtn(sender: UIButton) {
+    @IBAction func tapedtestLabel(sender: UIButton) {
         closeBtn.isHidden = false
         datePicker.isHidden = false
     }
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         
-        testLabel.text = formatter.string(from: sender.date) //swift3バージョンに挙げられているか不明
+        testLabel.text = formatter.string(from: sender.date)
     }
 
 
@@ -86,9 +86,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //        dateSelecter.text = dateFormat.string(from: nowDate)
 //        self.dateSelecter.delegate = self
 //
-        //DatePickerの設定（日付用）
-         inputDatePicker.datePickerMode = UIdatePickerMode.Date //dateをfixで直した。元はDate
-         dateSelecter.inputView = inputDatePicker
+//        //DatePickerの設定（日付用）
+//         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
+//         dateSelecter.inputView = inputDatePicker
         
 //        //キーボードに表示するツールバーの表示
 //        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
