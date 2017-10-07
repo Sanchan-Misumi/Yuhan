@@ -23,6 +23,23 @@ extension UIColor{
 
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    
+    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+    
+    // 9
+    func datePickerValueChanged (datePicker: UIDatePicker) {
+        
+        let dateformatter = DateFormatter()
+        
+        dateformatter.dateStyle = dateFormatterStyle.MediumStyle
+        dateformatter.timeStyle = dateFormatterStyle.NoStyle
+        
+        let dateValue = dateformatter.string(from: datePicker.date)
+        
+        dateLabel.text = dateValue
+        
+    }
+
     //変数を宣言する
     //今日の日付を代入
     let nowDate = Date()
@@ -63,41 +80,41 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         closeBtn.isHidden = true
         datePicker.isHidden = true
     }
-    //データ変更時の呼び出しメソッド
-    @IBAction func changetime(_ sender: UIDatePicker) {
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        
-        tapedcell = formatter.string(from: sender.date)
-    }
+//    //データ変更時の呼び出しメソッド
+//    @IBAction func changetime(_ sender: UIDatePicker) {
+//
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "HH:mm"
+//
+//        tapedcell = formatter.string(from: sender.date)
+//    }
 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        calenderCollectionView.delegate = self
-        calenderCollectionView.dataSource = self
-        calenderCollectionView.backgroundColor = UIColor.white
-        headerTitle.text = changeHeaderTitle(date: selectedDate)
-        
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//        calenderCollectionView.delegate = self
+//        calenderCollectionView.dataSource = self
+//        calenderCollectionView.backgroundColor = UIColor.white
+//        headerTitle.text = changeHeaderTitle(date: selectedDate)
+    
 //        //日付フィールドの設定
 //        dateFormat.dateFormat = "HH:mm"
 //        dateSelecter.text = dateFormat.string(from: nowDate)
 //        self.dateSelecter.delegate = self
 //
-        //ここを今あるDatePickerに入れたい
-        //DatePickerの設定（日付用）　入力のところを押すとDatePickerが出てくる
-         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
-         dateSelecter.inputView = inputDatePicker
-        
+//        //ここを今あるDatePickerに入れたい
+//        //DatePickerの設定（日付用）　入力のところを押すとDatePickerが出てくる
+//         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
+//         dateSelecter.inputView = inputDatePicker
+//        
 //        //キーボードに表示するツールバーの表示
 //        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
 //        pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
 //        pickerToolBar.barStyle = .blackTranslucent
 //        pickerToolBar.tintColor = UIColor.white
 //        pickerToolBar.backgroundColor = UIColor.LightRed()
-//
+////
 //        //ボタンの設定
 //        //右寄せのためのスペース設定
 //        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self,action: Selector(""))
@@ -108,12 +125,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //        //ツールバーにボタンを表示
 //        pickerToolBar.items = [spaceBarBtn,toolBarBtn]
 //        dateSelecter.inputAccessoryView = pickerToolBar
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
+//    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//
+//    }
+//
     //ここを今あるDatePickerに入れたい
     //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
     func toolBarBtnPush(sender: UIBarButtonItem){
