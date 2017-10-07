@@ -21,24 +21,27 @@ extension UIColor{
     }
 }
 
+
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+//    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+
     
-    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
+//    // 9
+//    func datePickerValueChanged (datePicker: UIDatePicker) {
+//
+//        datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
+//        let dateformatter = DateFormatter()
+//
+//
+//        dateformatter.dateStyle = DateFormatter.MediumStyle
+//        dateformatter.timeStyle = DateFormatter.NoStyle
+//
+//        let dateValue = dateformatter.string(from: datePicker.date)
+//
+//        dateLabel.text = dateValue
+//    }
     
-    // 9
-    func datePickerValueChanged (datePicker: UIDatePicker) {
-        
-        let dateformatter = DateFormatter()
-        
-        dateformatter.dateStyle = dateFormatterStyle.MediumStyle
-        dateformatter.timeStyle = dateFormatterStyle.NoStyle
-        
-        let dateValue = dateformatter.string(from: datePicker.date)
-        
-        dateLabel.text = dateValue
-        
-    }
 
     //変数を宣言する
     //今日の日付を代入
