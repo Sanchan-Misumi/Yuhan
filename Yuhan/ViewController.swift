@@ -23,12 +23,12 @@ extension UIColor{
 
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-//    //変数を宣言する
-//    //今日の日付を代入
-//    let nowDate = Date()
-//    let dateFormat = DateFormatter()
-//    let inputDatePicker = UIDatePicker()
-//    @IBOutlet weak var dateSelecter: UITextField!
+    //変数を宣言する
+    //今日の日付を代入
+    let nowDate = Date()
+    let dateFormat = DateFormatter()
+    let inputDatePicker = UIDatePicker()
+    @IBOutlet weak var dateSelecter: UITextField!
 //
     //カレンダー
     let dateManager = DateManager()
@@ -45,8 +45,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
     
     //
-     @IBOutlet weak var testLabel: UILabel!
-//    @IBOutlet weak var dateBtn: UIButton!
+//     @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var dateBtn: UIButton!
 //    @IBAction func tapedDateBtn(sender: UIButton) {
 //        datePicker.isHidden = false
 //    }
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
         
-        testLabel.text = formatter.string(from: sender.date)
+        tapedcell = formatter.string(from: sender.date)
     }
 
 
@@ -86,9 +86,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //        dateSelecter.text = dateFormat.string(from: nowDate)
 //        self.dateSelecter.delegate = self
 //
-//        //DatePickerの設定（日付用）
-//         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
-//         dateSelecter.inputView = inputDatePicker
+        //ここを今あるDatePickerに入れたい
+        //DatePickerの設定（日付用）　入力のところを押すとDatePickerが出てくる
+         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
+         dateSelecter.inputView = inputDatePicker
         
 //        //キーボードに表示するツールバーの表示
 //        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
@@ -113,16 +114,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         
     }
     
-//    //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
-//    func toolBarBtnPush(sender: UIBarButtonItem){
-//
-//
-//        var pickrDate = inputDatePicker.date
-//        dateSelecter.text = dateFormat.string(from: pickrDate)
-//
-//        self.view.endEditing(true)
-//
-//    }
+    //ここを今あるDatePickerに入れたい
+    //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
+    func toolBarBtnPush(sender: UIBarButtonItem){
+
+
+        let pickrDate = inputDatePicker.date
+        dateSelecter.text = dateFormat.string(from: pickrDate)
+
+        self.view.endEditing(true)
+
+    }
     //1
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
