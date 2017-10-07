@@ -83,7 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         closeBtn.isHidden = true
         datePicker.isHidden = true
     }
-//    //データ変更時の呼び出しメソッド
+    //データ変更時の呼び出しメソッド
 //    @IBAction func changetime(_ sender: UIDatePicker) {
 //
 //        let formatter = DateFormatter()
@@ -93,12 +93,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //    }
 
 //
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        // Do any additional setup after loading the view, typically from a nib.
-//        calenderCollectionView.delegate = self
-//        calenderCollectionView.dataSource = self
-//        calenderCollectionView.backgroundColor = UIColor.white
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        calenderCollectionView.delegate = self
+        calenderCollectionView.dataSource = self
+        calenderCollectionView.backgroundColor = UIColor.white
 //        headerTitle.text = changeHeaderTitle(date: selectedDate)
     
 //        //日付フィールドの設定
@@ -132,7 +132,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //    override func didReceiveMemoryWarning() {
 //        super.didReceiveMemoryWarning()
 //
-//    }
+    }
 //
     //ここを今あるDatePickerに入れたい
     //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
