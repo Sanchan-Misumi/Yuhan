@@ -72,6 +72,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //    }
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet var testLabel: UILabel!
+    
     
     @IBAction func tapedtestLabel(sender: UIButton) {
         closeBtn.isHidden = false
@@ -80,6 +82,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     
     @IBAction func tapedCloseBtn(sender: UIButton) {
+        let pickerDate = inputDatePicker.date
+        dateSelecter.text = dateFormat.string(from: pickerDate)
+        
         closeBtn.isHidden = true
         datePicker.isHidden = true
     }
@@ -136,11 +141,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
 //
     //ここを今あるDatePickerに入れたい
     //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
-    func toolBarBtnPush(sender: UIBarButtonItem){
-
-
-        let pickrDate = inputDatePicker.date
-        dateSelecter.text = dateFormat.string(from: pickrDate)
+    func closeBtnPush(sender: UIBarButtonItem){
+        
+        let pickerDate = inputDatePicker.date
+        dateSelecter.text = dateFormat.string(from: pickerDate)
 
         self.view.endEditing(true)
 

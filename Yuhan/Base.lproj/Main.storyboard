@@ -61,6 +61,13 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <label key="backgroundView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DAQ-aT-sgB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rQB-z6-Xhj" customClass="CalenderCell" customModule="Yuhan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -125,14 +132,16 @@
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
                         <outlet property="closeBtn" destination="M5V-9X-fSv" id="bhM-ug-hll"/>
                         <outlet property="datePicker" destination="Slq-am-XfY" id="pM2-fl-Dei"/>
+                        <outlet property="dateSelecter" destination="Soc-H2-fNT" id="wYT-wg-DJ9"/>
                         <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
                         <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
+                        <outlet property="testLabel" destination="DAQ-aT-sgB" id="b7u-cZ-Gic"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3S-Lt-A5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130.4000000000001" y="139.880059970015"/>
+            <point key="canvasLocation" x="1129.5" y="139.5"/>
         </scene>
     </scenes>
 </document>
