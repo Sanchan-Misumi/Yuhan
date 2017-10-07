@@ -46,7 +46,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     //
 //     @IBOutlet weak var testLabel: UILabel!
-    @IBOutlet weak var dateBtn: UIButton!
+//    @IBOutlet weak var dateBtn: UIButton!
 //    @IBAction func tapedDateBtn(sender: UIButton) {
 //        datePicker.isHidden = false
 //    }
