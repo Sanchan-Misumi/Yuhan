@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         
         testLabel.text = formatter.string(from: sender.date)
     }
-    @IBOutlet weak var testLabel: UILabel!
+   
     
 //    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
 
@@ -114,11 +114,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         calenderCollectionView.backgroundColor = UIColor.white
         
         // nibNameにはxib名を記載
-        let nib: UINib = UINib(nibName: "customCell", bundle: nil)
+        let nib = UINib(nibName: "customCell", bundle: nil)
         
         // forCellWithReuseIdentifierには
         // "Collection Reusable View"のIdentifierで指定したものを設定
-        collectionView.registerNib(nib, forCellWithReuseIdentifer: "cellId")
+        calenderCollectionView.register(nib, forCellWithReuseIdentifier: "cellId")
         
 //        headerTitle.text = changeHeaderTitle(date: selectedDate)
     
@@ -183,6 +183,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     //3
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
+         @IBOutlet weak var testLabel: UILabel!
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CalenderCell
         cell.ColorView.backgroundColor = UIColor.white
@@ -210,6 +212,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         let width: CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(daysPerWeek)
         let height: CGFloat = width * 1.0
         return CGSize(width: width, height: height)
+        
+        
     }
     //セルの垂直方向のアージンを設定
     
@@ -253,5 +257,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
      calenderCollectionView.reloadData()
      headerTitle.text = changeHeaderTitle(date: selectedDate)
         }
+   
+    
     }
 
