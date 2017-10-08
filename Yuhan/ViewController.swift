@@ -5,13 +5,8 @@
 //  Created by Maho Misumi on 2017/09/22.
 //  Copyright © 2017年 Maho Misumi. All rights reserved.
 //
-
-
-
-
 import UIKit
 
-//カレンダー
 extension UIColor{
     class func LightBlue() -> UIColor {
         return UIColor(red: 92.0 / 255, green: 192.0 / 255, blue: 210.0 / 255, alpha: 1.0)
@@ -21,37 +16,16 @@ extension UIColor{
     }
 }
 
-
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //データ変更時の呼び出しメソッド
     @IBAction func changeDate(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
-        
         testLabel.text = formatter.string(from: sender.date)
     }
-   
-    
-//    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
-
-    
-//    // 9
-//    func datePickerValueChanged (datePicker: UIDatePicker) {
+   @IBOutlet weak var testLabel: UILabel!
 //
-//        datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), for: UIControlEvents.valueChanged)
-//        let dateformatter = DateFormatter()
-//
-//
-//        dateformatter.dateStyle = DateFormatter.MediumStyle
-//        dateformatter.timeStyle = DateFormatter.NoStyle
-//
-//        let dateValue = dateformatter.string(from: datePicker.date)
-//
-//        dateLabel.text = dateValue
-//    }
-    
-
     //変数を宣言する
     //今日の日付を代入
     let nowDate = Date()
@@ -75,37 +49,40 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
     
 
-//     @IBOutlet weak var testLabel: UILabel!
-//    @IBOutlet weak var dateBtn: UIButton!
-//    @IBAction func tapedDateBtn(sender: UIButton) {
-//        datePicker.isHidden = false
-//    }
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
-//    @IBOutlet var testLabel: UILabel!
-    
-    
-    @IBAction func tapedtestLabel(sender: UIButton) {
-        closeBtn.isHidden = false
-        datePicker.isHidden = false
+    @IBOutlet var toziruBtn: UIButton!
+    @IBOutlet var openBtn: UIButton!
+    @IBOutlet var clearBtn: UIButton!
+
+    @IBAction func tapedtoziruBtn(sender: UIButton){
+        closeBtn.isHidden = true
+        datePicker.isHidden = true
+        toziruBtn.isHidden = true
+        clearBtn.isHidden = true
     }
-    
     
     @IBAction func tapedCloseBtn(sender: UIButton) {
         closeBtn.isHidden = true
         datePicker.isHidden = true
+        toziruBtn.isHidden = true
+        clearBtn.isHidden = true
     }
-    //データ変更時の呼び出しメソッド
-//    @IBAction func changetime(_ sender: UIDatePicker) {
-//
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "HH:mm"
-//
-//        tapedcell = formatter.string(from: sender.date)
-//    }
+    @IBAction func tapedopenBtn(sender: UIButton) {
+        closeBtn.isHidden = false
+        datePicker.isHidden = false
+        toziruBtn.isHidden = false
+        clearBtn.isHidden = false
+    }
+    @IBAction func tapedclear(sender: UIButton) {
+        testLabel.text = ""
+         closeBtn.isHidden = true
+        datePicker.isHidden = true
+        toziruBtn.isHidden = true
+        clearBtn.isHidden = true
+    }
 
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -119,51 +96,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         // forCellWithReuseIdentifierには
         // "Collection Reusable View"のIdentifierで指定したものを設定
         calenderCollectionView.register(nib, forCellWithReuseIdentifier: "cellId")
-        
-//        headerTitle.text = changeHeaderTitle(date: selectedDate)
     
-//        //日付フィールドの設定
-//        dateFormat.dateFormat = "HH:mm"
-//        dateSelecter.text = dateFormat.string(from: nowDate)
-//        self.dateSelecter.delegate = self
-//
-//        //ここを今あるDatePickerに入れたい
-//        //DatePickerの設定（日付用）　入力のところを押すとDatePickerが出てくる
-//         inputDatePicker.datePickerMode = UIDatePickerMode.date //dateをfixで直した。元はDate
-//         dateSelecter.inputView = inputDatePicker
-//        
-//        //キーボードに表示するツールバーの表示
-//        let pickerToolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height / 6, width: self.view.frame.size.width, height: 40.0))
-//        pickerToolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height-20.0)
-//        pickerToolBar.barStyle = .blackTranslucent
-//        pickerToolBar.tintColor = UIColor.white
-//        pickerToolBar.backgroundColor = UIColor.LightRed()
-////
-//        //ボタンの設定
-//        //右寄せのためのスペース設定
-//        let spaceBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self,action: Selector(""))
-//
-//        //完了ボタンを設定
-//        let toolBarBtn = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector(("toolBarBtnPush:")))
-//
-//        //ツールバーにボタンを表示
-//        pickerToolBar.items = [spaceBarBtn,toolBarBtn]
-//        dateSelecter.inputAccessoryView = pickerToolBar
-//    }
-//    override func didReceiveMemoryWarning() {
-//        super.didReceiveMemoryWarning()
-//
     }
 //
     //ここを今あるDatePickerに入れたい
     //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
     func closeBtnPush(sender: UIBarButtonItem){
-        
         let pickerDate = inputDatePicker.date
-        dateSelecter.text = dateFormat.string(from: pickerDate)
-
         self.view.endEditing(true)
-
     }
     //1
     
@@ -184,7 +124,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     //3
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     
-         @IBOutlet weak var testLabel: UILabel!
+         
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CalenderCell
         cell.ColorView.backgroundColor = UIColor.white
@@ -212,12 +152,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         let width: CGFloat = (collectionView.frame.size.width - cellMargin * numberOfMargin) / CGFloat(daysPerWeek)
         let height: CGFloat = width * 1.0
         return CGSize(width: width, height: height)
-        
-        
     }
     //セルの垂直方向のアージンを設定
-    
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         
         return cellMargin
@@ -227,7 +163,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
          let cell = collectionView.cellForItem(at: indexPath) as! CalenderCell
         
         cell.tapNumber = cell.tapNumber + 1
-    
         
          if cell.tapNumber % 3 == 0 {
             cell.ColorView.backgroundColor = UIColor.white

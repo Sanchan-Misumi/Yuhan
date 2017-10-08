@@ -10,6 +10,9 @@ import UIKit
 
 class CalenderCell: UICollectionViewCell {
     
+    
+    
+    @IBOutlet weak var testLabel: UILabel!
     var textLabel: UILabel!
     
     var tapNumber: Int = 0
