@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EE0807DE1F8A4BC00071AAD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0807DC1F8A4BC00071AAD0 /* LaunchScreen.storyboard */; };
+		EE0807E41F8A632A0071AAD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0807DF1F8A4E840071AAD0 /* Main.storyboard */; };
 		EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323B91F74F1240004F300 /* AppDelegate.swift */; };
 		EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323BB1F74F1240004F300 /* ViewController.swift */; };
 		EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C01F74F1240004F300 /* Assets.xcassets */; };
@@ -246,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0807E41F8A632A0071AAD0 /* Main.storyboard in Resources */,
 				EE0807DE1F8A4BC00071AAD0 /* LaunchScreen.storyboard in Resources */,
 				EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */,
 			);
