@@ -48,8 +48,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     @IBOutlet weak var calenderHeaderView: UIView! //①
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
     
-
-    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet var toziruBtn: UIButton!

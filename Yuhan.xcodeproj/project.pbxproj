@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EE0807DA1F8A03090071AAD0 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0807D91F8A03090071AAD0 /* CustomCollectionViewCell.swift */; };
 		EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323B91F74F1240004F300 /* AppDelegate.swift */; };
 		EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323BB1F74F1240004F300 /* ViewController.swift */; };
 		EE1323BF1F74F1240004F300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323BD1F74F1240004F300 /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EE0807D91F8A03090071AAD0 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE1323B61F74F1240004F300 /* Yuhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yuhan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1323B91F74F1240004F300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE1323BB1F74F1240004F300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 		EE1323AD1F74F1240004F300 = {
 			isa = PBXGroup;
 			children = (
-				EE0807D91F8A03090071AAD0 /* CustomCollectionViewCell.swift */,
 				EE1323B81F74F1240004F300 /* Yuhan */,
 				EE1323CD1F74F1240004F300 /* YuhanTests */,
 				EE1323D81F74F1240004F300 /* YuhanUITests */,
@@ -269,7 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */,
-				EE0807DA1F8A03090071AAD0 /* CustomCollectionViewCell.swift in Sources */,
 				EEC421731F791283002AE24B /* CalenderCell.swift in Sources */,
 				EEC421711F791238002AE24B /* DateManager.swift in Sources */,
 				EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */,
