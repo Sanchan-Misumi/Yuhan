@@ -88,12 +88,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         calenderCollectionView.dataSource = self
         calenderCollectionView.backgroundColor = UIColor.white
         
-        // nibNameにはxib名を記載
+//        // nibNameにはxib名を記載
         let nib = UINib(nibName: "customCell", bundle: nil)
-        
-        // forCellWithReuseIdentifierには
-        // "Collection Reusable View"のIdentifierで指定したものを設定
-        calenderCollectionView.register(nib, forCellWithReuseIdentifier: "cellId")
+//        
+//        // forCellWithReuseIdentifierには
+//        // "Collection Reusable View"のIdentifierで指定したものを設定
+//        calenderCollectionView.register(nib, forCellWithReuseIdentifier: "cellId")
     
     }
 //
