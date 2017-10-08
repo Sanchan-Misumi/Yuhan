@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         testLabel.text = formatter.string(from: sender.date)
     }
    @IBOutlet weak var testLabel: UILabel!
-//
+    
     //変数を宣言する
     //今日の日付を代入
     let nowDate = Date()
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     //ここを今あるDatePickerに入れたい
     //完了を押すとピッカーの値を、テキストフィールドに挿入して、ピッカーを閉じる
     func closeBtnPush(sender: UIBarButtonItem){
-        let pickerDate = inputDatePicker.date
+    let pickerDate = inputDatePicker.date
         self.view.endEditing(true)
     }
     //1

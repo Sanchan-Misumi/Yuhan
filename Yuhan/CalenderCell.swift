@@ -25,9 +25,9 @@ class CalenderCell: UICollectionViewCell {
     
     @IBOutlet weak var testLabel: UILabel!
     var textLabel: UILabel!
-    
+
     var tapNumber: Int = 0
-    
+
  
     @IBOutlet var ColorView: UIView!
     
@@ -41,8 +41,7 @@ class CalenderCell: UICollectionViewCell {
         textLabel.textAlignment = NSTextAlignment.center
         //Cellに追加
         self.addSubview(textLabel!)
-        self.addSubview(openBtn!)
-        self.addSubview(testLabel!)
+
         
     }
     

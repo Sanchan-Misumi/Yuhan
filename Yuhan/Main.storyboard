@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,7 +43,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapedclearWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="8RL-Pt-QiE"/>
+                                    <action selector="tapedclearWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="G4R-Yz-FTk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haF-Xa-a67">
@@ -55,7 +54,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapedtoziruBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="hCT-JA-Zpf"/>
+                                    <action selector="tapedtoziruBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="NRL-mV-LUi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M5V-9X-fSv">
@@ -66,24 +65,57 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="tapedCloseBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="2UI-dP-2QB"/>
+                                    <action selector="tapedCloseBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="beb-O6-TyR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53T-wA-PEf">
+                                <rect key="frame" x="162" y="323" width="50" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siE-br-eND">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="tapedopenBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="tCY-iK-Rah"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-6y-Lr5">
+                                <rect key="frame" x="2" y="79" width="375" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N2I-YF-ZRd">
+                                    <size key="itemSize" width="50" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" misplaced="YES" id="owg-hK-Wyk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jFD-y9-Lde" customClass="CalenderCell" customModule="Yuhan">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="ColorView" destination="owg-hK-Wyk" id="vgA-pA-tMS"/>
+                                            <outlet property="testLabel" destination="53T-wA-PEf" id="D2V-Q1-ImU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYm-ug-bSa">
-                                <rect key="frame" x="2" y="0.0" width="375" height="71"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKV-kW-HOa">
-                                        <rect key="frame" x="46" y="20" width="53" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
-                                        <state key="normal" title="pre">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tappeHeaderPrevBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="bsL-6s-Ib3"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e35-le-obG">
                                         <rect key="frame" x="170" y="16" width="103" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -103,75 +135,36 @@
                                             <action selector="tappeHeaderNextBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="aHP-br-yv1"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKV-kW-HOa">
+                                        <rect key="frame" x="40" y="16" width="53" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                        <state key="normal" title="pre">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tappeHeaderPrevBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="bsL-6s-Ib3"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.77109210941119988" blue="0.92414960988544859" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.95335075578506157" green="0.69472558017703534" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-6y-Lr5">
-                                <rect key="frame" x="2" y="79" width="375" height="588"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N2I-YF-ZRd">
-                                    <size key="itemSize" width="50" height="70"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <view key="backgroundView" contentMode="scaleToFill" misplaced="YES" id="owg-hK-Wyk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53T-wA-PEf">
-                                            <rect key="frame" x="162" y="284" width="50" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siE-br-eND">
-                                            <rect key="frame" x="172" y="279" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <action selector="openBtn:" destination="rQB-z6-Xhj" eventType="touchUpInside" id="6hK-JL-QQv"/>
-                                                <action selector="tapedopenBtnWithSender:" destination="rQB-z6-Xhj" eventType="touchUpInside" id="JYR-SG-Ydd"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rQB-z6-Xhj" customClass="CalenderCell" customModule="Yuhan" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <connections>
-                                            <outlet property="ColorView" destination="owg-hK-Wyk" id="w95-9r-9SR"/>
-                                            <outlet property="clearBtn" destination="Aa5-6R-uWz" id="rrK-iX-2tw"/>
-                                            <outlet property="closeBtn" destination="M5V-9X-fSv" id="FVx-hk-pkX"/>
-                                            <outlet property="datePicker" destination="6bw-qa-iBN" id="EPG-Ch-T4A"/>
-                                            <outlet property="openBtn" destination="siE-br-eND" id="aCL-4c-cOl"/>
-                                            <outlet property="testLabel" destination="53T-wA-PEf" id="KPU-19-D4z"/>
-                                            <outlet property="toziruBtn" destination="haF-Xa-a67" id="Mon-62-CiF"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calenderCollectionView" destination="9g3-6y-Lr5" id="I30-jV-Gyc"/>
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
-                        <outlet property="clearBtn" destination="Aa5-6R-uWz" id="k72-St-erH"/>
-                        <outlet property="closeBtn" destination="M5V-9X-fSv" id="upL-O2-Dln"/>
+                        <outlet property="clearBtn" destination="Aa5-6R-uWz" id="9tf-pA-6uh"/>
+                        <outlet property="closeBtn" destination="M5V-9X-fSv" id="PcV-Hq-NeC"/>
                         <outlet property="datePicker" destination="Slq-am-XfY" id="pM2-fl-Dei"/>
                         <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
                         <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
-                        <outlet property="toziruBtn" destination="haF-Xa-a67" id="gyr-ob-Q49"/>
+                        <outlet property="openBtn" destination="siE-br-eND" id="M6S-eB-HgM"/>
+                        <outlet property="testLabel" destination="53T-wA-PEf" id="Fov-Eo-Q75"/>
+                        <outlet property="toziruBtn" destination="haF-Xa-a67" id="Y2x-0m-zak"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3S-Lt-A5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -183,7 +176,7 @@
                     </date>
                 </datePicker>
             </objects>
-            <point key="canvasLocation" x="1654" y="129"/>
+            <point key="canvasLocation" x="1653.5999999999999" y="128.18590704647679"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.9472471780822993" green="0.6066503141052384" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0807DE1F8A4BC00071AAD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0807DC1F8A4BC00071AAD0 /* LaunchScreen.storyboard */; };
 		EE1323BA1F74F1240004F300 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323B91F74F1240004F300 /* AppDelegate.swift */; };
 		EE1323BC1F74F1240004F300 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323BB1F74F1240004F300 /* ViewController.swift */; };
-		EE1323BF1F74F1240004F300 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323BD1F74F1240004F300 /* Main.storyboard */; };
 		EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C01F74F1240004F300 /* Assets.xcassets */; };
-		EE1323C41F74F1240004F300 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */; };
 		EE1323CF1F74F1240004F300 /* YuhanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323CE1F74F1240004F300 /* YuhanTests.swift */; };
 		EE1323DA1F74F1240004F300 /* YuhanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1323D91F74F1240004F300 /* YuhanUITests.swift */; };
 		EEC421711F791238002AE24B /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC421701F791238002AE24B /* DateManager.swift */; };
@@ -36,12 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0807DD1F8A4BC00071AAD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE0807DF1F8A4E840071AAD0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EE1323B61F74F1240004F300 /* Yuhan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yuhan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1323B91F74F1240004F300 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE1323BB1F74F1240004F300 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE1323BE1F74F1240004F300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE1323C01F74F1240004F300 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EE1323C31F74F1240004F300 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1323C51F74F1240004F300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE1323CA1F74F1240004F300 /* YuhanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YuhanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1323CE1F74F1240004F300 /* YuhanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YuhanTests.swift; sourceTree = "<group>"; };
@@ -78,9 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE0807DB1F8A4BC00071AAD0 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				EE0807DC1F8A4BC00071AAD0 /* LaunchScreen.storyboard */,
+			);
+			name = Base.lproj;
+			path = Yuhan/Base.lproj;
+			sourceTree = "<group>";
+		};
 		EE1323AD1F74F1240004F300 = {
 			isa = PBXGroup;
 			children = (
+				EE0807DB1F8A4BC00071AAD0 /* Base.lproj */,
 				EE1323B81F74F1240004F300 /* Yuhan */,
 				EE1323CD1F74F1240004F300 /* YuhanTests */,
 				EE1323D81F74F1240004F300 /* YuhanUITests */,
@@ -101,11 +110,10 @@
 		EE1323B81F74F1240004F300 /* Yuhan */ = {
 			isa = PBXGroup;
 			children = (
+				EE0807DF1F8A4E840071AAD0 /* Main.storyboard */,
 				EE1323B91F74F1240004F300 /* AppDelegate.swift */,
 				EE1323BB1F74F1240004F300 /* ViewController.swift */,
-				EE1323BD1F74F1240004F300 /* Main.storyboard */,
 				EE1323C01F74F1240004F300 /* Assets.xcassets */,
-				EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */,
 				EE1323C51F74F1240004F300 /* Info.plist */,
 				EEC421701F791238002AE24B /* DateManager.swift */,
 				EEC421721F791283002AE24B /* CalenderCell.swift */,
@@ -238,9 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1323C41F74F1240004F300 /* LaunchScreen.storyboard in Resources */,
+				EE0807DE1F8A4BC00071AAD0 /* LaunchScreen.storyboard in Resources */,
 				EE1323C11F74F1240004F300 /* Assets.xcassets in Resources */,
-				EE1323BF1F74F1240004F300 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,18 +311,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EE1323BD1F74F1240004F300 /* Main.storyboard */ = {
+		EE0807DC1F8A4BC00071AAD0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EE1323BE1F74F1240004F300 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		EE1323C21F74F1240004F300 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE1323C31F74F1240004F300 /* Base */,
+				EE0807DD1F8A4BC00071AAD0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
