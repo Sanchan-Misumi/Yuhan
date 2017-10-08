@@ -24,6 +24,15 @@ extension UIColor{
 
 class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    //データ変更時の呼び出しメソッド
+    @IBAction func changeDate(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm"
+        
+        testLabel.text = formatter.string(from: sender.date)
+    }
+    @IBOutlet weak var testLabel: UILabel!
+    
 //    datePicker.addTarget(self, action: #selector(ViewController.datePickerValueChanged), forControlEvents: UIControlEvents.ValueChanged)
 
     
@@ -49,7 +58,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     let dateFormat = DateFormatter()
     let inputDatePicker = UIDatePicker()
     @IBOutlet weak var dateSelecter: UITextField!
-//
+
+    
     //カレンダー
     let dateManager = DateManager()
     let daysPerWeek: Int = 7
@@ -60,19 +70,20 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     @IBOutlet weak var headerPrevBtn: UIButton! //①
     @IBOutlet weak var headerNextBtn: UIButton! //②
-    @IBOutlet weak var headerTitle: UILabel! //③
+    @IBOutlet weak var headerTitle: UILabel! //③最初の月を治す
     @IBOutlet weak var calenderHeaderView: UIView! //①
     @IBOutlet weak var calenderCollectionView: UICollectionView! //①
     
-    //
+
 //     @IBOutlet weak var testLabel: UILabel!
 //    @IBOutlet weak var dateBtn: UIButton!
 //    @IBAction func tapedDateBtn(sender: UIButton) {
 //        datePicker.isHidden = false
 //    }
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var closeBtn: UIButton!
-    @IBOutlet var testLabel: UILabel!
+//    @IBOutlet var testLabel: UILabel!
     
     
     @IBAction func tapedtestLabel(sender: UIButton) {
@@ -82,9 +93,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
     
     
     @IBAction func tapedCloseBtn(sender: UIButton) {
-        let pickerDate = inputDatePicker.date
-        dateSelecter.text = dateFormat.string(from: pickerDate)
-        
         closeBtn.isHidden = true
         datePicker.isHidden = true
     }
@@ -104,6 +112,14 @@ class ViewController: UIViewController, UITextFieldDelegate, UICollectionViewDat
         calenderCollectionView.delegate = self
         calenderCollectionView.dataSource = self
         calenderCollectionView.backgroundColor = UIColor.white
+        
+        // nibNameにはxib名を記載
+        let nib: UINib = UINib(nibName: "customCell", bundle: nil)
+        
+        // forCellWithReuseIdentifierには
+        // "Collection Reusable View"のIdentifierで指定したものを設定
+        collectionView.registerNib(nib, forCellWithReuseIdentifer: "cellId")
+        
 //        headerTitle.text = changeHeaderTitle(date: selectedDate)
     
 //        //日付フィールドの設定
