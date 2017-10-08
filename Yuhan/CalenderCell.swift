@@ -9,9 +9,19 @@
 import UIKit
 
 class CalenderCell: UICollectionViewCell {
-    
 
-    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var closeBtn: UIButton!
+    @IBOutlet var toziruBtn: UIButton!
+    @IBOutlet var openBtn: UIButton!
+    @IBOutlet var clearBtn: UIButton!
+
+    @IBAction func tapedopenBtn(sender: UIButton) {
+        closeBtn.isHidden = false
+        datePicker.isHidden = false
+        toziruBtn.isHidden = false
+        clearBtn.isHidden = false
+    }
     
     @IBOutlet weak var testLabel: UILabel!
     var textLabel: UILabel!
@@ -31,6 +41,9 @@ class CalenderCell: UICollectionViewCell {
         textLabel.textAlignment = NSTextAlignment.center
         //Cellに追加
         self.addSubview(textLabel!)
+        self.addSubview(openBtn!)
+        self.addSubview(testLabel!)
+        
     }
     
     override init(frame: CGRect){

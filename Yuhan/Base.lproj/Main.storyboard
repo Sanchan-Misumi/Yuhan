@@ -26,48 +26,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53T-wA-PEf">
-                                <rect key="frame" x="162" y="323" width="50" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-6y-Lr5">
-                                <rect key="frame" x="0.0" y="79" width="375" height="588"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N2I-YF-ZRd">
-                                    <size key="itemSize" width="50" height="70"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <view key="backgroundView" contentMode="scaleToFill" misplaced="YES" id="owg-hK-Wyk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </view>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rQB-z6-Xhj" customClass="CustomCollectionViewCell" customModule="Yuhan" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                        <connections>
-                                            <outlet property="ColorView" destination="owg-hK-Wyk" id="w95-9r-9SR"/>
-                                            <outlet property="clearBtn" destination="Aa5-6R-uWz" id="rrK-iX-2tw"/>
-                                            <outlet property="closeBtn" destination="M5V-9X-fSv" id="FVx-hk-pkX"/>
-                                            <outlet property="datePicker" destination="6bw-qa-iBN" id="EPG-Ch-T4A"/>
-                                            <outlet property="openBtn" destination="siE-br-eND" id="goR-zB-M5H"/>
-                                            <outlet property="testLabel" destination="53T-wA-PEf" id="KPU-19-D4z"/>
-                                            <outlet property="toziruBtn" destination="haF-Xa-a67" id="Mon-62-CiF"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Slq-am-XfY">
                                 <rect key="frame" x="0.0" y="439" width="375" height="228"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -87,7 +45,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tapedclearWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="8RL-Pt-QiE"/>
-                                    <action selector="tapedtoziruBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="7bb-8x-08C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haF-Xa-a67">
@@ -112,21 +69,6 @@
                                     <action selector="tapedCloseBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="2UI-dP-2QB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siE-br-eND">
-                                <rect key="frame" x="172" y="318" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="openBtn:" destination="rQB-z6-Xhj" eventType="touchUpInside" id="6hK-JL-QQv"/>
-                                    <action selector="tapedopenBtnWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="EaE-6f-nZz"/>
-                                </connections>
-                            </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6bw-qa-iBN">
-                                <rect key="frame" x="0.0" y="439" width="375" height="220"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="528859278.852889">
-                                    <!--2017-10-05 01:21:18 +0000-->
-                                </date>
-                            </datePicker>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BYm-ug-bSa">
                                 <rect key="frame" x="2" y="0.0" width="375" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,7 +78,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                         <state key="normal" title="pre">
-                                            <color key="titleColor" red="1" green="0.32704217699999999" blue="0.69058524219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
                                             <action selector="tappeHeaderPrevBthWithSender:" destination="0y9-dY-AkI" eventType="touchUpInside" id="bsL-6s-Ib3"/>
@@ -146,7 +88,7 @@
                                         <rect key="frame" x="170" y="16" width="103" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                        <color key="textColor" red="0.9996192455291748" green="0.32716348767280579" blue="0.69025421142578125" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.0070029145077720178" green="0.0064150265409669066" blue="0.0054417799754456677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhX-fM-OOu">
@@ -154,7 +96,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                         <state key="normal" title="next">
-                                            <color key="titleColor" red="1" green="0.32704217699999999" blue="0.69058524219999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <color key="titleShadowColor" red="0.97300132757538893" green="0.87070353963610436" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
@@ -162,29 +104,86 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.90807813671837723" blue="0.9901745222358117" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.77109210941119988" blue="0.92414960988544859" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.95335075578506157" green="0.69472558017703534" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-6y-Lr5">
+                                <rect key="frame" x="2" y="79" width="375" height="588"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="N2I-YF-ZRd">
+                                    <size key="itemSize" width="50" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <view key="backgroundView" contentMode="scaleToFill" misplaced="YES" id="owg-hK-Wyk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="588"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53T-wA-PEf">
+                                            <rect key="frame" x="162" y="284" width="50" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siE-br-eND">
+                                            <rect key="frame" x="172" y="279" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="openBtn:" destination="rQB-z6-Xhj" eventType="touchUpInside" id="6hK-JL-QQv"/>
+                                                <action selector="tapedopenBtnWithSender:" destination="rQB-z6-Xhj" eventType="touchUpInside" id="JYR-SG-Ydd"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="rQB-z6-Xhj" customClass="CalenderCell" customModule="Yuhan" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="ColorView" destination="owg-hK-Wyk" id="w95-9r-9SR"/>
+                                            <outlet property="clearBtn" destination="Aa5-6R-uWz" id="rrK-iX-2tw"/>
+                                            <outlet property="closeBtn" destination="M5V-9X-fSv" id="FVx-hk-pkX"/>
+                                            <outlet property="datePicker" destination="6bw-qa-iBN" id="EPG-Ch-T4A"/>
+                                            <outlet property="openBtn" destination="siE-br-eND" id="aCL-4c-cOl"/>
+                                            <outlet property="testLabel" destination="53T-wA-PEf" id="KPU-19-D4z"/>
+                                            <outlet property="toziruBtn" destination="haF-Xa-a67" id="Mon-62-CiF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="calenderCollectionView" destination="9g3-6y-Lr5" id="I30-jV-Gyc"/>
                         <outlet property="calenderHeaderView" destination="2QF-Cq-c5m" id="hkD-EO-9QL"/>
-                        <outlet property="clearBtn" destination="Aa5-6R-uWz" id="dOb-84-VnH"/>
+                        <outlet property="clearBtn" destination="Aa5-6R-uWz" id="k72-St-erH"/>
                         <outlet property="closeBtn" destination="M5V-9X-fSv" id="upL-O2-Dln"/>
                         <outlet property="datePicker" destination="Slq-am-XfY" id="pM2-fl-Dei"/>
                         <outlet property="headerNextBtn" destination="RhX-fM-OOu" id="KWX-25-Pwg"/>
                         <outlet property="headerPrevBtn" destination="IKV-kW-HOa" id="bT1-oG-YHD"/>
                         <outlet property="headerTitle" destination="e35-le-obG" id="u7l-Nh-woT"/>
-                        <outlet property="openBtn" destination="siE-br-eND" id="rGo-DZ-Aya"/>
-                        <outlet property="testLabel" destination="53T-wA-PEf" id="9It-Hq-128"/>
                         <outlet property="toziruBtn" destination="haF-Xa-a67" id="gyr-ob-Q49"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3S-Lt-A5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="6bw-qa-iBN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="528859278.852889">
+                        <!--2017-10-05 01:21:18 +0000-->
+                    </date>
+                </datePicker>
             </objects>
-            <point key="canvasLocation" x="1127.2" y="138.0809595202399"/>
+            <point key="canvasLocation" x="1654" y="129"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.9472471780822993" green="0.6066503141052384" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
